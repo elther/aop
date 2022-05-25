@@ -34,7 +34,7 @@ public class AspectV6Advice {
     }
 
     @AfterReturning(value = "hello.aop.order.aop.Pointcuts.orderAndService()", returning = "result")
-    public void doReturn(JoinPoint joinPoint, Object result) {
+    public void doReturn(JoinPoint joinPoint, String result) {
         // return 변경은 안됨
         log.info("[result] {} return={}", joinPoint.getSignature(), result);
     }
